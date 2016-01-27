@@ -1,0 +1,38 @@
+
+<ion-view style="" title="Artist">
+    
+   
+    <ion-content class="has-header">
+        
+        <div class="item item-input-inset">
+          <label class="item-input-wrapper">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input style="width:100%" type="text" placeholder="Search" ng-model="searchFilter" ng-change="scrollTop()">
+          </label>
+           
+        </div>    
+
+                <!-- 
+                    <div ng-show="(items | filter:searchFilter).length == 0" class="card">
+                        <div class="item item-text-wrap item-icon-left">
+                            <i class="icon ion-sad"></i>No results
+                        </div>
+                    </div>
+                -->
+
+        
+        <ion-list class="list" show-delete="false" can-swipe="true" >
+        <ion-item auto-list-divider auto-list-divider-value="{{item.user.name.first}}" class="item item-avatar" ng-repeat="item in items | filter:searchFilter" href="#/app/profile">
+		<img src="{{item.user.picture.thumbnail}} " />
+		<h2 style="padding-left:50px">{{item.user.name.first}} {{item.user.name.last}}</h2>
+		<p style="padding-left:50px">{{item.user.location.city}}</p>
+            
+            <ion-option-button class="button-assertive icon ion-heart" ng-click="favorite(item)"></ion-option-button>
+            <ion-option-button class="button-calm icon ion-thumbsup" ng-click="like(item)"> </ion-option-button>
+            
+		</ion-item>
+
+      </ion-list>
+    </ion-content>
+
+</ion-view> 

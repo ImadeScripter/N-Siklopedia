@@ -1,0 +1,101 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-calm">
+   
+    <ion-nav-back-button class="button-icon icon ion-ios-arrow-back">
+        Back
+    </ion-nav-back-button>
+  
+
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+    </ion-nav-buttons>
+        
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-android-more-vertical" menu-toggle="right">
+        </button>
+    </ion-nav-buttons>
+        
+    </ion-nav-bar>
+
+    <!-- TABS -->
+
+    <ion-tabs style="" class="tabs-icon-top tabs-striped tabs-color-calm tabs-background-light">
+        <ion-tab style="" title="Home" icon="ion-android-home" href="#/app/home">
+            <ion-nav-view name="home"></ion-nav-view>
+        </ion-tab>
+        <ion-tab style="" title="Artist" icon="ion-ios-people" href="#/app/artist">
+            <ion-nav-view name="artist"></ion-nav-view>
+        </ion-tab>
+        <ion-tab style="" title="Blog" icon="ion-ios-book" href="#/app/blog">
+            <ion-nav-view name="blog"></ion-nav-view>
+        </ion-tab>
+        <ion-tab style="" title="About" icon="ion-ios-information" href="#/app/about">
+            <ion-nav-view name="about"></ion-nav-view>
+        </ion-tab>
+    </ion-tabs>
+
+
+  </ion-side-menu-content>
+
+   <!-- Side Menu (left) -->
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-calm">
+      <h1 class="title"><img id='n-logo' src='img/n-logo.png'></h1>
+    </ion-header-bar>
+      
+   <!-- Sidebar Content -->
+    <ion-content class="gem-sidebar">
+      <!-- Profile Box - Extends ionic's .row -->
+      <div class="row gem-sidebar-profile-box">
+        
+      </div>
+      <!-- End Profile Box -->
+        
+      <ion-list> 
+          
+        <ion-item class="item-ng-click" nav-clear menu-close ng-click="login()">Login</ion-item>
+        <!--<ion-item class="item-ng-click" nav-clear menu-close ng-click="contact()">Contact Us</ion-item>
+        <ion-item class="item-ng-click" nav-clear menu-close ng-click="subscribe()">Subscribe</ion-item> -->
+ 
+      </ion-list>
+    </ion-content>
+      
+  </ion-side-menu>
+    
+    <ion-side-menu side="right">
+    <ion-header-bar class="bar-calm">
+      <h1 class="title">Settings</h1>
+    </ion-header-bar>
+      
+    <ion-content>
+       <ul class="list">
+
+          <li class="item item-toggle">
+             Show Notifications
+             <label class="toggle toggle-calm">
+               <input type="checkbox" checked>
+               <div class="track">
+                 <div class="handle"></div>
+               </div>
+             </label>
+          </li>
+           
+           <li class="item item-toggle">
+             Sound
+             <label class="toggle toggle-calm">
+               <input type="checkbox">
+               <div class="track">
+                 <div class="handle"></div>
+               </div>
+             </label>
+          </li>
+
+
+        </ul>
+    </ion-content>
+      
+  </ion-side-menu>
+    
+</ion-side-menus>
